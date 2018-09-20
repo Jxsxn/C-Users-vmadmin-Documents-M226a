@@ -1,0 +1,7 @@
+C:\Users\vmadmin\Documents\M226a\Oddday\Oddday\obj\Debug\Oddday.csprojResolveAssemblyReference.cache
+C:\Users\vmadmin\Documents\M226a\Oddday\Oddday\obj\Debug\Oddday.csproj.CoreCompileInputs.cache
+C:\Users\vmadmin\Documents\M226a\Oddday\Oddday\bin\Debug\Oddday.exe.config
+C:\Users\vmadmin\Documents\M226a\Oddday\Oddday\bin\Debug\Oddday.exe
+C:\Users\vmadmin\Documents\M226a\Oddday\Oddday\bin\Debug\Oddday.pdb
+C:\Users\vmadmin\Documents\M226a\Oddday\Oddday\obj\Debug\Oddday.exe
+C:\Users\vmadmin\Documents\M226a\Oddday\Oddday\obj\Debug\Oddday.pdb

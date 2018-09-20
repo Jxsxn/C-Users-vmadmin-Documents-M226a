@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\vmadmin\.Rider2018.2\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\vmadmin\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\vmadmin\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Oddday.-234711791.00" t="ExcludeRecursive" />
+    <e p="C:\Users\vmadmin\Documents\M226a\Oddday" t="IncludeFlat">
+      <e p="Oddday" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="Bag.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FightSystem.cs" t="Include" />
+        <e p="Food.cs" t="Include" />
+        <e p="Forest.cs" t="Include" />
+        <e p="Items.cs" t="Include" />
+        <e p="Magician.cs" t="Include" />
+        <e p="Map.cs" t="Include" />
+        <e p="Market.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Oddday.cs" t="Include" />
+        <e p="Oddday.csproj" t="IncludeRecursive" />
+        <e p="Overworld.cs" t="Include" />
+        <e p="Player.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Warrior.cs" t="Include" />
+        <e p="Weapons.cs" t="Include" />
+      </e>
+      <e p="Oddday.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
