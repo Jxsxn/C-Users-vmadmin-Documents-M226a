@@ -7,10 +7,14 @@ namespace Oddday
     {
         public static void ForestPlace()
         {
-            Console.WriteLine("You're at the foresr now!");
+            Console.WriteLine("You're at the forest now!");
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine(Oddday.PlayerName + " hmmmm.. ");
+            Console.WriteLine("The air you breath is thin and cold.. maybe you shouldn't be here for now..");
+            Console.ReadLine();
+            Console.Clear();
+            
         }
     }
 }

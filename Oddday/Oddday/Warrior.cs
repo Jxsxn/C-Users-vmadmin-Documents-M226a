@@ -4,18 +4,19 @@ namespace Oddday
     {
         public class BaseStatsWarrior
         {
-            public int Health = 40;
-            public int Attack = 20;
-            public int Defense = 5;
-            public int Speed = 5;
-            public int Flight = 0;
+            public static string Race = "Warrior";
+            public static int Health = 40;
+            public static int Attack = 20;
+            public static int Defense = 5;
+            public static int Speed = 5;
+            public static int Flight = 0;
         }
 
-        public class MovePoolWarrior
+        public static class AttacksWar
         {
-            public int Fight = 0;
-            public int Strength = 5;
-            public int Hammerarm = 20;
+            public static int Fight = 0;
+            public static int Strength = 5;
+            public static int Hammerarm = 20;
         }
     }
 }

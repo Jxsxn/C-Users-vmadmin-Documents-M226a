@@ -11,7 +11,7 @@ namespace Oddday
         public static void Main(string[] args)
         {
             Oddday oddday = new Oddday();
-            oddday.start();
+            Oddday.Start();
         }
     }
 }

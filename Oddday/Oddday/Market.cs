@@ -10,7 +10,8 @@ namespace Oddday
             Console.WriteLine("You're at the market now!");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine(Oddday.PlayerName + " hmmmm.. ");
+            Console.WriteLine(Oddday.PlayerName + " hmmmm.. there's a Bazar");
+            Purchase.PurchaseShop();
         }
     }
 }

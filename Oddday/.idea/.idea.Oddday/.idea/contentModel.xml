@@ -6,16 +6,19 @@
     <e p="C:\Users\vmadmin\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Oddday.-234711791.00" t="ExcludeRecursive" />
     <e p="C:\Users\vmadmin\Documents\M226a\Oddday" t="IncludeFlat">
       <e p="Oddday" t="IncludeRecursive">
+        <e p="Act.cs" t="Include" />
         <e p="App.config" t="Include" />
         <e p="Bag.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Enemies.cs" t="Include" />
         <e p="FightSystem.cs" t="Include" />
         <e p="Food.cs" t="Include" />
         <e p="Forest.cs" t="Include" />
+        <e p="Home.cs" t="Include" />
         <e p="Items.cs" t="Include" />
         <e p="Magician.cs" t="Include" />
-        <e p="Map.cs" t="Include" />
         <e p="Market.cs" t="Include" />
+        <e p="Menu.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Oddday.cs" t="Include" />
         <e p="Oddday.csproj" t="IncludeRecursive" />
@@ -25,6 +28,7 @@
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
+        <e p="Purchase.cs" t="Include" />
         <e p="Warrior.cs" t="Include" />
         <e p="Weapons.cs" t="Include" />
       </e>

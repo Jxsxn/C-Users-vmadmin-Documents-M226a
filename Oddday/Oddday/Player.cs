@@ -1,14 +1,32 @@
 using System;
+using System.Dynamic;
+using System.Runtime.Remoting.Activation;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Oddday
 {
     public class Player
     {
-        
-        public static void PlayerRace()
+        public string Player1 = Oddday.PlayerName;
+        public int Lvl = 1;
+        public int PlayerExp = 0;
+        public int ExpForLvlUp = 50 + (Lvl * 20);
+
+        public static void LvlUp()
         {
-            Console.Write("Are you a [warrior] or [magician]: ");
+            int i = Lvl;
+            if (PlayerExp == ExpForLvlUp)
+            {
+                i++;
+                Console.WriteLine("Level up!");
+                Console.WriteLine("You're level is now: " + Lvl);
+            }
+        }
+
+
+        public static void CheckEntryChar()
+        {
+            Console.Write("Entry [warrior] or [magician]: ");
             var race = Console.ReadLine();
             switch (race.ToLower())
             {
@@ -18,6 +36,12 @@ namespace Oddday
                     Console.Clear();
                     Console.WriteLine("Are you sure you're a warrior i mean i don't see any muscles hohoho!");
                     CheckChar();
+                    Oddday.PlayerRace = Warrior.BaseStatsWarrior.Race;
+                    BaseStatsPlayer.Health += Warrior.BaseStatsWarrior.Health;
+                    BaseStatsPlayer.Attack += Warrior.BaseStatsWarrior.Attack;
+                    BaseStatsPlayer.Defense += Warrior.BaseStatsWarrior.Defense;
+                    BaseStatsPlayer.Speed += Warrior.BaseStatsWarrior.Speed;
+                    BaseStatsPlayer.Flight += Warrior.BaseStatsWarrior.Flight;
                     break;
                 case "magician":
                     Console.WriteLine("Simsala bim.. hahaha... haha.. ha..");
@@ -25,6 +49,12 @@ namespace Oddday
                     Console.Clear();
                     Console.WriteLine("sorry.. i just like magicians..");
                     CheckChar();
+                    Oddday.PlayerRace = Magician.BaseStatsMagician.Race;
+                    BaseStatsPlayer.Health += Magician.BaseStatsMagician.Health;
+                    BaseStatsPlayer.Attack += Magician.BaseStatsMagician.Attack;
+                    BaseStatsPlayer.Defense += Magician.BaseStatsMagician.Defense;
+                    BaseStatsPlayer.Speed += Magician.BaseStatsMagician.Speed;
+                    BaseStatsPlayer.Flight += Magician.BaseStatsMagician.Flight;
                     break;
                 case "player":
                     Console.WriteLine(
@@ -35,38 +65,45 @@ namespace Oddday
                 default:
                     Console.WriteLine("This race does not exist!");
                     Console.WriteLine("Don't worry about it we all do typo's");
-                    PlayerRace();
+                    CheckEntryChar();
                     break;
+            }
 
-                    void CheckChar()
-                    {
-                        Console.WriteLine("Continue[c] or select again[sa]?");
-                        var CheckRace = Console.ReadLine();
-                        switch (CheckRace.ToLower())
-                        {
-                            case "c":
-                                var PRace = race;
-                                break;
-                            case "sa":
-                                PlayerRace();
-                                break;
-                        }
-                    }
+            void CheckChar()
+            {
+                Console.WriteLine("Continue[c] or select again[sa]?");
+                var CheckRace = Console.ReadLine();
+                switch (CheckRace.ToLower())
+                {
+                    case "c":
+                        break;
+                    case "sa":
+                        CheckEntryChar();
+                        break;
+                }
             }
         }
 
+
         public static void PrintStats()
         {
-            Console.WriteLine("Stats:");
+            Console.WriteLine("Stats:    ");
+            Console.WriteLine("Race:    " + BaseStatsPlayer.Race);
+            Console.WriteLine("Health:    " + BaseStatsPlayer.Health);
+            Console.WriteLine("Attack:    " + BaseStatsPlayer.Attack);
+            Console.WriteLine("Defense:    " + BaseStatsPlayer.Defense);
+            Console.WriteLine("Speed:    " + BaseStatsPlayer.Speed);
+            Console.WriteLine("Chance of fleeing:    " + BaseStatsPlayer.Flight);
         }
 
-        public class BasePlayerStats
+        public class BaseStatsPlayer
         {
-            public int Health = 20;
-            public int Attack = 1;
-            public int Defense = 1;
-            public int Speed = 10;
-            public int Flight = 2;
+            public static string Race = "Player";
+            public static int Health = 20;
+            public static int Attack = 1;
+            public static int Defense = 1;
+            public static int Speed = 10;
+            public static int Flight = 2;
         }
     }
 }
