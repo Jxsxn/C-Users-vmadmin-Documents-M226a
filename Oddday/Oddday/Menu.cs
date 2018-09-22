@@ -8,8 +8,9 @@ namespace Oddday
         private Items odddayItems;
         private Bag odddaybag;
         private Player odddayplayer;
+        private Menu odddaymenu;
         
-        public void CheckMenu()
+        public static void CheckMenu(Oddday oddday)
         {
             Console.Clear();
             Console.WriteLine(oddday.PlayerName1 + ":  Guess with [m] I can open the menu..");
@@ -17,7 +18,7 @@ namespace Oddday
             switch (ChckMenu.ToLower())
             {
                 case "m":
-                    PrintMenu();
+                    //PrintMenu();
                     break;
                 default:
                     Console.WriteLine(oddday.PlayerName1 +
@@ -28,12 +29,13 @@ namespace Oddday
                     Console.ReadLine();
                     Console.WriteLine("try again");
                     Console.ReadLine();
-                    CheckMenu();
+                    CheckMenu(oddday);
                     break;
             }
 
             return;
         }
+        
         public void PrintMenu()
         {
             Console.WriteLine("Menu:");
@@ -48,7 +50,7 @@ namespace Oddday
             {
                 case "b":
                     Console.WriteLine("Bag: ");
-                    odddaybag.PrintBag();
+                    odddaybag.PrintBag(oddday);
                     Console.ReadLine();
                     Console.Clear();
                     PrintMenu();
@@ -63,7 +65,7 @@ namespace Oddday
 
                 case "s":
                     Console.WriteLine("Stats");
-                    odddayplayer.PrintStats();
+                    odddayplayer.PrintStats(oddday);
                     Console.ReadLine();
                     Console.Clear();
                     PrintMenu();
@@ -71,14 +73,14 @@ namespace Oddday
 
                 case "q":
                     Console.WriteLine("You sure you want to quit? :(");
-                    oddday.QuitGame();
+                    oddday.QuitGame(oddday);
                     Console.ReadLine();
                     Console.Clear();
                     PrintMenu();
                     break;
 
                 case "r":
-                    oddday.RestartGame();
+                    oddday.RestartGame(oddday);
                     Console.ReadLine();
                     Console.Clear();
                     break;
@@ -98,12 +100,12 @@ namespace Oddday
             }
         }
         
-        public void YouSure()
+        public void YouSure(Oddday oddday)
         {
-            Console.WriteLine(oddday.PlayerName1 + "You sure you want to? :(");
+            Console.WriteLine("You sure you want to?");
             Console.WriteLine("    Entry: [yes] or [no]");
-            var YouSure = Console.ReadLine();
-            switch (YouSure.ToLower())
+            var USure = Console.ReadLine();
+            switch (USure.ToLower())
             {
                 case "yes":
                     break;

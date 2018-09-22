@@ -4,7 +4,7 @@ namespace Oddday
 {
     public class Purchase
     {
-        public  void PurchaseShop(Oddday oddday)
+        public static void PurchaseShop(Oddday oddday)
         {
             Console.WriteLine("Choose between [food], [weapons] or [leave]");
             Console.ReadLine();
@@ -16,23 +16,22 @@ namespace Oddday
                     Console.WriteLine("Hello Customer!");
                     Console.WriteLine("Do you wanna buy something?");
                     break;
+                
                 case "weapons":
                     Console.WriteLine("Hello " + oddday.PlayerRace1 + " How can I help you?");
-
                     break;
-
+                
                 case "leave":
                     Console.WriteLine(oddday.PlayerName1 + "leaving bye!");
                     Console.ReadLine();
                     Console.Clear();
                     break;
+                
                 default:
                     Console.WriteLine("Select again");
                     PurchaseShop(oddday);
                     break;
             }
-
-            return;
         }
     }
 }

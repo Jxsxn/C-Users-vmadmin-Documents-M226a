@@ -7,16 +7,16 @@ namespace Oddday
 {
     public class Player
     {
-        
         public int Lvl = 1;
         public int PlayerExp = 0;
-        public int ExpForLvlUp = 50 + (Lvl * 20);
+        public int ExpForLvlUp;
 
         public Player()
         {
-            
+            ExpForLvlUp = 50 + (Lvl * 20);
         }
-        public  void LvlUp()
+
+        public void LvlUp()
         {
             int i = Lvl;
             if (PlayerExp == ExpForLvlUp)
@@ -28,7 +28,7 @@ namespace Oddday
         }
 
 
-        public  void CheckEntryChar(Oddday oddday)
+        public static void CheckEntryChar(Oddday oddday)
         {
             Console.Write("Entry [warrior] or [magician]: ");
             var race = Console.ReadLine();
@@ -40,12 +40,12 @@ namespace Oddday
                     Console.Clear();
                     Console.WriteLine("Are you sure you're a warrior i mean i don't see any muscles hohoho!");
                     CheckChar();
-                    Oddday.PlayerRace1 = Warrior.BaseStatsWarrior.Race;
-                    BaseStatsPlayer.Health += Warrior.BaseStatsWarrior.Health;
+                    oddday.PlayerRace1 = race;
+                    /*BaseStatsPlayer.Health += Warrior.BaseStatsWarrior.Health;
                     BaseStatsPlayer.Attack += Warrior.BaseStatsWarrior.Attack;
                     BaseStatsPlayer.Defense += Warrior.BaseStatsWarrior.Defense;
                     BaseStatsPlayer.Speed += Warrior.BaseStatsWarrior.Speed;
-                    BaseStatsPlayer.Flight += Warrior.BaseStatsWarrior.Flight;
+                    BaseStatsPlayer.Flight += Warrior.BaseStatsWarrior.Flight;*/
                     break;
                 case "magician":
                     Console.WriteLine("Simsala bim.. hahaha... haha.. ha..");
@@ -53,12 +53,12 @@ namespace Oddday
                     Console.Clear();
                     Console.WriteLine("sorry.. i just like magicians..");
                     CheckChar();
-                    Oddday.PlayerRace1 = Magician.BaseStatsMagician.Race;
-                    BaseStatsPlayer.Health += Magician.BaseStatsMagician.Health;
+                    oddday.PlayerRace1 = race;
+                    /*BaseStatsPlayer.Health += Magician.BaseStatsMagician.Health;
                     BaseStatsPlayer.Attack += Magician.BaseStatsMagician.Attack;
                     BaseStatsPlayer.Defense += Magician.BaseStatsMagician.Defense;
                     BaseStatsPlayer.Speed += Magician.BaseStatsMagician.Speed;
-                    BaseStatsPlayer.Flight += Magician.BaseStatsMagician.Flight;
+                    BaseStatsPlayer.Flight += Magician.BaseStatsMagician.Flight;*/
                     break;
                 case "player":
                     Console.WriteLine(
@@ -88,21 +88,19 @@ namespace Oddday
             }
         }
 
-
-        public void PrintStats()
+        public void PrintStats(Oddday oddday)
         {
-            Console.WriteLine("Stats:    ");
-            Console.WriteLine("Race:    " + BaseStatsPlayer.Race);
+            /*Console.WriteLine("Stats:    ");
+            Console.WriteLine("Race:    " + oddday.PlayerRace1);
             Console.WriteLine("Health:    " + BaseStatsPlayer.Health);
             Console.WriteLine("Attack:    " + BaseStatsPlayer.Attack);
             Console.WriteLine("Defense:    " + BaseStatsPlayer.Defense);
             Console.WriteLine("Speed:    " + BaseStatsPlayer.Speed);
-            Console.WriteLine("Chance of fleeing:    " + BaseStatsPlayer.Flight);
+            Console.WriteLine("Chance of fleeing:    " + BaseStatsPlayer.Flight);*/
         }
 
         public class BaseStatsPlayer
         {
-            public string Race = "Player";
             public int Health = 20;
             public int Attack = 1;
             public int Defense = 1;

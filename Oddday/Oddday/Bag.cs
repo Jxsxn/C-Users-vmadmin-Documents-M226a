@@ -10,10 +10,10 @@ namespace Oddday
             
         }
         Bag[] BagArray = new Bag[10];
-        public void PrintBag()
+        public void PrintBag(Oddday oddday)
         {
             Console.WriteLine("Bag:    ");
-            odddayItems.PrintItems();
+            //Items.PrintItems(oddday);
             
         }
     }

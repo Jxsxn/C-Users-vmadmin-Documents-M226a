@@ -4,7 +4,7 @@ namespace Oddday
 {
     public class Overworld
     {
-        public void Map(Oddday oddday)
+        public static void Map(Oddday oddday)
         {
             Console.WriteLine("Select your next target:");
             Console.WriteLine("    Entry:    [Market], [Forest] or [House]");
@@ -26,7 +26,7 @@ namespace Oddday
                     
                 default:
                     Console.WriteLine("Try again");
-                    Map();
+                    Map(oddday);
                     break;
             }
         }

@@ -5,18 +5,18 @@ namespace Oddday
 {
     public class Home
     {
-        public void HomePlayer()
+        public static void HomePlayer(Oddday oddday)
         {
             Console.WriteLine("You're home now!");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine(Oddday.PlayerName1 + ": I think i forgot the chicken..");
+            Console.WriteLine(oddday.PlayerName1 + ": I think i forgot the chicken..");
             Console.ReadLine();
             Console.Clear();
-            Chicken();
+            Chicken(oddday);
         }
 
-        private void Chicken()
+        private static void Chicken(Oddday oddday)
         {
             Console.Clear();
             Console.WriteLine("Want to take a look at the chicken?");
@@ -39,8 +39,8 @@ namespace Oddday
                     break;
                 default:
                     Console.WriteLine("You cant decide so you let it exist in a superposition");
-                    Console.WriteLine("The space-time-continuum has stopped working.. " + Oddday.PlayerName1 + " look what you've done!!");
-                    Oddday.RestartGame();
+                    Console.WriteLine("The space-time-continuum has stopped working.. " + oddday.PlayerName1 + " look what you've done!!");
+                    oddday.RestartGame(oddday);
                     break;
             }
         }

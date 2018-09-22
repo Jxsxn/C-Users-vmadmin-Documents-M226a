@@ -12,8 +12,9 @@ namespace Oddday
     public class Oddday
     {
         public bool ShowMenu = false;
-        private  string PlayerName;
-        private  string PlayerRace;
+        private string PlayerName;
+        private string PlayerRace;
+
 
         public string PlayerName1
         {
@@ -27,11 +28,7 @@ namespace Oddday
             set => PlayerRace = value;
         }
 
-        public Oddday()
-        {
-            
-        }
-        public void Start()
+        public void Start(Oddday oddday)
         {
             Console.Clear();
             Console.WriteLine("Goodmorning... good morning.. eh..");
@@ -41,7 +38,7 @@ namespace Oddday
                 if (PlayerName1 == "")
                 {
                     Console.WriteLine("You left it blank");
-                    Start();
+                    Start(oddday);
                 }
             }
             Console.Clear();
@@ -49,7 +46,7 @@ namespace Oddday
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("So now " + PlayerName1 + " are you a warrior or magician?");
-            Player.CheckEntryChar();
+            Player.CheckEntryChar(oddday);
             Console.WriteLine("You wake up and feel ready to safe the day!");
             Console.ReadLine();
             Console.Clear();
@@ -73,32 +70,29 @@ namespace Oddday
 
             Console.ReadLine();
             Console.Clear();
-            Menu.CheckMenu();
+            Menu.CheckMenu(oddday);
             Console.WriteLine(
                 "So that was you menu.. not that much aight? but don't worry you can buy food in the marketplace");
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Where do you wanna go?");
-            Overworld.Map();
-            
+            Overworld.Map(oddday);
         }
 
-
-        public void RestartGame()
+        public void RestartGame(Oddday oddday)
         {
             Console.WriteLine("Restart");
             Console.ReadLine();
             Console.Clear();
-            Start();
+            Start(oddday);
         }
 
-        public void QuitGame()
+        public void QuitGame(Oddday oddday)
         {
             Console.WriteLine("Hope you liked it!");
             Console.ReadLine();
             Console.Clear();
             Application.Exit();
         }
-
     }
 }
