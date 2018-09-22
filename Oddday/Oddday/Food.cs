@@ -5,7 +5,7 @@ namespace Oddday
 {
     public class Food
     {
-        public static void PrintFood()
+        public void PrintFood()
         {
             var PrntFood = Console.ReadLine();
             switch (PrntFood.ToLower())
@@ -39,7 +39,7 @@ namespace Oddday
          
         }
 
-        public static void HowMuch()
+        public void HowMuch()
         {
             Console.WriteLine("Entry a number: ");
             Console.WriteLine("Or don't buy anything []");

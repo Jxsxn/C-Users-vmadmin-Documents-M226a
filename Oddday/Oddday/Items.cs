@@ -5,13 +5,18 @@ namespace Oddday
 {
     public class Items
     {
+        public Items()
+        {
+            
+        }
         Items[] ItemArray = new Items[50];
-        public static void PrintItems()
+       
+        public  void PrintItems()
         {
             Console.WriteLine("Not defined yet");
         }
 
-        public static int _currentGold = 0;
+        public int _currentGold = 0;
 
 
     }

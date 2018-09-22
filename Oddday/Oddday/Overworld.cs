@@ -4,7 +4,7 @@ namespace Oddday
 {
     public class Overworld
     {
-        public static void Map()
+        public void Map(Oddday oddday)
         {
             Console.WriteLine("Select your next target:");
             Console.WriteLine("    Entry:    [Market], [Forest] or [House]");
@@ -14,14 +14,14 @@ namespace Oddday
             switch (TravelMode.ToLower())
             {
                 case "market":
-                    Market.MarketPlace();
+                    Market.MarketPlace(oddday);
                     break;
                 case "forest":
-                    Forest.ForestPlace();
+                    Forest.ForestPlace(oddday);
                     break;
                 case "home":
                     Console.WriteLine("Home sweet home");
-                    Home.HomePlayer();
+                    Home.HomePlayer(oddday);
                     break;
                     
                 default:

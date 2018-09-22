@@ -7,13 +7,13 @@ namespace Oddday
 {
     public class FightSystem
     {
-        public static void CheckRaceInFight()
+        public void CheckRaceInFight(Oddday oddday)
         {
             var CheckRInFight = Console.ReadLine();
             switch (CheckRInFight)
             {
                 case "warrior":
-                    if (Oddday.PlayerRace == Warrior.BaseStatsWarrior.Race)
+                    if (Oddday.PlayerRace1 == Warrior.BaseStatsWarrior.Race)
                     {
                         InFight();
                     }
@@ -21,7 +21,7 @@ namespace Oddday
                     break;
 
                 case "Magician":
-                    if (Oddday.PlayerRace == Magician.BaseStatsMagician.Race)
+                    if (Oddday.PlayerRace1 == Magician.BaseStatsMagician.Race)
                     {
                         InFight();
                     }
@@ -30,7 +30,7 @@ namespace Oddday
             }
         }
 
-        public static void CheckEnemy()
+        public void CheckEnemy()
         {
             Random rnd = new Random();
             int CheckEnemyInFight = rnd.Next(1, 3);
@@ -61,7 +61,7 @@ namespace Oddday
             }
         }
 
-        public static void InFight()
+        public  void InFight()
         {
 
             var InFght = Console.ReadLine();
@@ -82,7 +82,7 @@ namespace Oddday
             }
         }
 
-        public static void DamageCalc()
+        public  void DamageCalc()
         {
             bool isAlive = true;
             void CheckAlive()

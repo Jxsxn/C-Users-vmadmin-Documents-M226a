@@ -12,57 +12,57 @@ namespace Oddday
     public class Oddday
     {
         public bool ShowMenu = false;
-        public  string PlayerName;
+        private  string PlayerName;
+        private  string PlayerRace;
 
-        public  string PlayerRace;
+        public string PlayerName1
+        {
+            get => PlayerName;
+            set => PlayerName = value;
+        }
 
+        public string PlayerRace1
+        {
+            get => PlayerRace;
+            set => PlayerRace = value;
+        }
 
+        public Oddday()
+        {
+            
+        }
         public void Start()
         {
+            Console.Clear();
             Console.WriteLine("Goodmorning... good morning.. eh..");
             Console.WriteLine("Please tell me your name:");
-            PlayerName = Console.ReadLine();
+            PlayerName1 = Console.ReadLine();
             {
-                if (PlayerName == "")
+                if (PlayerName1 == "")
                 {
+                    Console.WriteLine("You left it blank");
                     Start();
                 }
-                else if (PlayerName == "Jasmin")
-                {
-                    Console.WriteLine("Hahahahahahahahahhahahahahahahahahhahahahahhahahahahahahahahahahhahahahahhaahhaahhaha");
-                    Console.ReadLine();
-                    Console.Clear();
-                    Console.WriteLine("...");
-                    Console.ReadLine();
-                    Console.Clear();
-                    Console.WriteLine("..");
-                    Console.ReadLine();
-                    Console.Clear();
-                    Console.WriteLine("    ..What's so funny?..");
-                    Console.ReadLine();
-                    Console.Clear();
-                }
-                
             }
             Console.Clear();
-            Console.WriteLine("I see.. " + PlayerName + " that's a great Name!");
+            Console.WriteLine("I see.. " + PlayerName1 + " that's a great Name!");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("So now " + PlayerName + " are you a warrior or magician?");
+            Console.WriteLine("So now " + PlayerName1 + " are you a warrior or magician?");
             Player.CheckEntryChar();
             Console.WriteLine("You wake up and feel ready to safe the day!");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine(PlayerName + ":  Oh Boy im so exited..");
+            Console.WriteLine(PlayerName1 + ":  Oh Boy im so exited..");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine(PlayerName + ":  Something feels odd about today..");
+            Console.WriteLine(PlayerName1 + ":  Something feels odd about today..");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine(PlayerName + ":  But first i need a healthy breakfast.");
+            Console.WriteLine(PlayerName1 + ":  But first i need a healthy breakfast.");
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine(PlayerName + ":  True hero's never skip breakfast!");
+            Console.WriteLine(PlayerName1 + ":  True hero's never skip breakfast!");
 
             Console.ReadLine();
             Console.Clear();

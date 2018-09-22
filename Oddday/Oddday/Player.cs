@@ -7,12 +7,16 @@ namespace Oddday
 {
     public class Player
     {
-        public string Player1 = Oddday.PlayerName;
+        
         public int Lvl = 1;
         public int PlayerExp = 0;
         public int ExpForLvlUp = 50 + (Lvl * 20);
 
-        public static void LvlUp()
+        public Player()
+        {
+            
+        }
+        public  void LvlUp()
         {
             int i = Lvl;
             if (PlayerExp == ExpForLvlUp)
@@ -24,7 +28,7 @@ namespace Oddday
         }
 
 
-        public static void CheckEntryChar()
+        public  void CheckEntryChar(Oddday oddday)
         {
             Console.Write("Entry [warrior] or [magician]: ");
             var race = Console.ReadLine();
@@ -36,7 +40,7 @@ namespace Oddday
                     Console.Clear();
                     Console.WriteLine("Are you sure you're a warrior i mean i don't see any muscles hohoho!");
                     CheckChar();
-                    Oddday.PlayerRace = Warrior.BaseStatsWarrior.Race;
+                    Oddday.PlayerRace1 = Warrior.BaseStatsWarrior.Race;
                     BaseStatsPlayer.Health += Warrior.BaseStatsWarrior.Health;
                     BaseStatsPlayer.Attack += Warrior.BaseStatsWarrior.Attack;
                     BaseStatsPlayer.Defense += Warrior.BaseStatsWarrior.Defense;
@@ -49,7 +53,7 @@ namespace Oddday
                     Console.Clear();
                     Console.WriteLine("sorry.. i just like magicians..");
                     CheckChar();
-                    Oddday.PlayerRace = Magician.BaseStatsMagician.Race;
+                    Oddday.PlayerRace1 = Magician.BaseStatsMagician.Race;
                     BaseStatsPlayer.Health += Magician.BaseStatsMagician.Health;
                     BaseStatsPlayer.Attack += Magician.BaseStatsMagician.Attack;
                     BaseStatsPlayer.Defense += Magician.BaseStatsMagician.Defense;
@@ -65,7 +69,7 @@ namespace Oddday
                 default:
                     Console.WriteLine("This race does not exist!");
                     Console.WriteLine("Don't worry about it we all do typo's");
-                    CheckEntryChar();
+                    CheckEntryChar(oddday);
                     break;
             }
 
@@ -78,14 +82,14 @@ namespace Oddday
                     case "c":
                         break;
                     case "sa":
-                        CheckEntryChar();
+                        CheckEntryChar(oddday);
                         break;
                 }
             }
         }
 
 
-        public static void PrintStats()
+        public void PrintStats()
         {
             Console.WriteLine("Stats:    ");
             Console.WriteLine("Race:    " + BaseStatsPlayer.Race);
@@ -98,12 +102,12 @@ namespace Oddday
 
         public class BaseStatsPlayer
         {
-            public static string Race = "Player";
-            public static int Health = 20;
-            public static int Attack = 1;
-            public static int Defense = 1;
-            public static int Speed = 10;
-            public static int Flight = 2;
+            public string Race = "Player";
+            public int Health = 20;
+            public int Attack = 1;
+            public int Defense = 1;
+            public int Speed = 10;
+            public int Flight = 2;
         }
     }
 }

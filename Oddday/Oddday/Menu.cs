@@ -4,10 +4,15 @@ namespace Oddday
 {
     public class Menu
     {
+        private Oddday oddday;
+        private Items odddayItems;
+        private Bag odddaybag;
+        private Player odddayplayer;
+        
         public void CheckMenu()
         {
             Console.Clear();
-            Console.WriteLine(Oddday.PlayerName + ":  Guess with [m] I can open the menu..");
+            Console.WriteLine(oddday.PlayerName1 + ":  Guess with [m] I can open the menu..");
             var ChckMenu = Console.ReadLine();
             switch (ChckMenu.ToLower())
             {
@@ -15,7 +20,7 @@ namespace Oddday
                     PrintMenu();
                     break;
                 default:
-                    Console.WriteLine(Oddday.PlayerName +
+                    Console.WriteLine(oddday.PlayerName1 +
                                       ":  So you just ignore that i said with [m] you could open the Menu?..");
                     Console.ReadLine();
                     Console.Clear();
@@ -43,14 +48,14 @@ namespace Oddday
             {
                 case "b":
                     Console.WriteLine("Bag: ");
-                    Bag.PrintBag();
+                    odddaybag.PrintBag();
                     Console.ReadLine();
                     Console.Clear();
                     PrintMenu();
                     break;
                 
                 case "g":
-                    Console.WriteLine("Money: " + Items._currentGold);
+                    Console.WriteLine("Money: " + odddayItems._currentGold);
                     Console.ReadLine();
                     Console.Clear();
                     PrintMenu();
@@ -58,7 +63,7 @@ namespace Oddday
 
                 case "s":
                     Console.WriteLine("Stats");
-                    Player.PrintStats();
+                    odddayplayer.PrintStats();
                     Console.ReadLine();
                     Console.Clear();
                     PrintMenu();
@@ -66,14 +71,14 @@ namespace Oddday
 
                 case "q":
                     Console.WriteLine("You sure you want to quit? :(");
-                    Oddday.QuitGame();
+                    oddday.QuitGame();
                     Console.ReadLine();
                     Console.Clear();
                     PrintMenu();
                     break;
 
                 case "r":
-                    Oddday.RestartGame();
+                    oddday.RestartGame();
                     Console.ReadLine();
                     Console.Clear();
                     break;
@@ -95,7 +100,7 @@ namespace Oddday
         
         public void YouSure()
         {
-            Console.WriteLine(Oddday.PlayerName + "You sure you want to? :(");
+            Console.WriteLine(oddday.PlayerName1 + "You sure you want to? :(");
             Console.WriteLine("    Entry: [yes] or [no]");
             var YouSure = Console.ReadLine();
             switch (YouSure.ToLower())
@@ -103,7 +108,7 @@ namespace Oddday
                 case "yes":
                     break;
                 case "no":
-                    Menu.PrintMenu();
+                    PrintMenu();
                     break;
                 default:
                     Console.WriteLine("please one of these:    [yes] or [no]?");

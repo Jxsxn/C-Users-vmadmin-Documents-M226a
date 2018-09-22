@@ -4,9 +4,9 @@ namespace Oddday
 {
     public class Act
     {
-        public static void Acting()
+        public void Acting(Oddday oddday)
         {
-            Console.WriteLine(Oddday.PlayerName + ": Please i don't wanna fight!");
+            Console.WriteLine(Oddday.PlayerName1 + ": Please i don't wanna fight!");
         }
     }
 }

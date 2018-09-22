@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\vmadmin\.Rider2018.2\config\scratches" t="IncludeRecursive" />
     <e p="C:\Users\vmadmin\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\vmadmin\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Oddday.-234711791.00" t="ExcludeRecursive" />
-    <e p="C:\Users\vmadmin\Documents\M226a\Oddday" t="IncludeFlat">
+    <e p="C:\Users\vmadmin\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Oddday.-1117900319.00" t="ExcludeRecursive" />
+    <e p="C:\Users\vmadmin\Desktop\C-Users-vmadmin-Documents-M226a-master\Oddday" t="IncludeFlat">
       <e p="Oddday" t="IncludeRecursive">
         <e p="Act.cs" t="Include" />
         <e p="App.config" t="Include" />

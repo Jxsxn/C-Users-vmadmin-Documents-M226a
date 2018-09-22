@@ -5,31 +5,28 @@ namespace Oddday
 
     }
 
-    public static class GhostDog
+    public  class GhostDog
         {
-            public static int Health = 80;
-            
-            public static int Attack = 25;
-            public static int Defense = 25;
-            public static int Speed = 30;
-        }
-    
-    
-
-        public static class VampireCat
-        {
-            public static int Health = 50;
-            public static int Attack = 40;
-            public static int Defense = 10;
-            public static int Speed = 60;
+            public int Health = 80;     
+            public  int Attack = 25;
+            public  int Defense = 25;
+            public  int Speed = 30;
         }
 
-        public static  class WerewolfSpider
+        public  class VampireCat
         {
-            public static int Health = 100;
-            public static int Attack = 30;
-            public static int Defense = 40;
-            public static int Speed = 30;
+            public  int Health = 50;
+            public  int Attack = 40;
+            public  int Defense = 10;
+            public  int Speed = 60;
+        }
+
+        public class WerewolfSpider
+        {
+            public  int Health = 100;
+            public  int Attack = 30;
+            public  int Defense = 40;
+            public  int Speed = 30;
         }
     
 
